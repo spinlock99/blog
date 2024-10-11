@@ -54,7 +54,6 @@ if config_env() == :prod do
   config :blog, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
   config :blog, BlogWeb.Endpoint,
-    server: true,
     url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443, scheme: "https"],
     http: [
       # Enable IPv6 and bind on all interfaces.
